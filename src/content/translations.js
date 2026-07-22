@@ -17,7 +17,9 @@ export const translations = {
     },
     projects: {
       eyebrow: 'Projects',
-      title: 'Our work.',
+      title: 'We’re building something bright.',
+      description: 'Our projects are currently taking shape. We’re working on them with care and will be ready to share more soon.',
+      imageAlt: 'A construction crane assembling an illuminated geometric structure',
     },
     about: {
       eyebrow: 'About us',
@@ -46,7 +48,9 @@ export const translations = {
     },
     projects: {
       eyebrow: 'Proyectos',
-      title: 'Nuestro trabajo.',
+      title: 'Estamos construyendo algo brillante.',
+      description: 'Nuestros proyectos están tomando forma. Trabajamos en ellos con cuidado y muy pronto podremos compartir más.',
+      imageAlt: 'Una grúa construyendo una estructura geométrica iluminada',
     },
     about: {
       eyebrow: 'Nosotros',

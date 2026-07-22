@@ -57,3 +57,40 @@
   line-height: 1;
   letter-spacing: -0.05em;
 }
+
+.projects-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(20rem, 1.25fr);
+  align-items: center;
+  max-width: none;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.projects-section__copy {
+  max-width: 32rem;
+}
+
+.projects-section__copy > p:last-child {
+  margin: var(--space-5) 0 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.65;
+}
+
+.projects-section__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(var(--radius-lg), 3vw, 2rem);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 48rem) {
+  .projects-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .projects-section__image {
+    order: -1;
+  }
+}

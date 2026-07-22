@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header/Header.jsx'
 import { translations } from './content/translations.js'
+import projectsInProgress from './assets/projects/projects-in-progress.png'
 import './App.css'
 
 function App() {
@@ -26,9 +27,19 @@ function App() {
           <p>{content.intro.description}</p>
         </section>
 
-        <section id="proyectos" className="prototype-section prototype-section--secondary" aria-labelledby="projects-title">
-          <p className="prototype-section__eyebrow">{content.projects.eyebrow}</p>
-          <h2 id="projects-title">{content.projects.title}</h2>
+        <section id="proyectos" className="prototype-section prototype-section--secondary projects-section" aria-labelledby="projects-title">
+          <div className="projects-section__copy">
+            <p className="prototype-section__eyebrow">{content.projects.eyebrow}</p>
+            <h2 id="projects-title">{content.projects.title}</h2>
+            <p>{content.projects.description}</p>
+          </div>
+          <img
+            className="projects-section__image"
+            src={projectsInProgress}
+            alt={content.projects.imageAlt}
+            width="1672"
+            height="941"
+          />
         </section>
 
         <section id="about-us" className="prototype-section prototype-section--secondary" aria-labelledby="about-title">
