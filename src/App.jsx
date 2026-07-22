@@ -8,7 +8,7 @@ function App() {
 
       <main id="contenido" className="page-content">
         <section className="prototype-section prototype-section--intro" aria-labelledby="intro-title">
-          <p className="prototype-section__eyebrow">Web Luminaria</p>
+          <p className="prototype-section__eyebrow">Luminaria Creations</p>
           <h1 id="intro-title">Una página para iluminar nuevas ideas.</h1>
           <p>
             Este espacio queda preparado para el mensaje principal de

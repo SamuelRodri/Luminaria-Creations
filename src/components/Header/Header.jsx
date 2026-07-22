@@ -15,9 +15,9 @@ function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="brand" href="#contenido" aria-label="Web Luminaria, principio de la página" onClick={closeMenu}>
+        <a className="brand" href="#contenido" aria-label="Luminaria Creations, principio de la página" onClick={closeMenu}>
           <span className="brand__mark" aria-hidden="true">L</span>
-          <span className="brand__name">Luminaria</span>
+          <span className="brand__name">Luminaria Creations</span>
         </a>
 
         <button
