@@ -14,12 +14,18 @@ const socialProfiles = {
     shortLabel: 'be',
     url: 'https://www.behance.net/',
   },
+  itchIo: {
+    label: 'itch.io',
+    shortLabel: 'io',
+    url: 'https://luminariacreations.itch.io/',
+  },
 }
 
 const contactSocials = [
   socialProfiles.instagram,
   socialProfiles.linkedIn,
   socialProfiles.behance,
+  socialProfiles.itchIo,
 ]
 
 const createTeamMembers = (roles) => [
