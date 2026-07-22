@@ -16,6 +16,10 @@
   scroll-margin-top: var(--header-height);
 }
 
+.prototype-section--intro {
+  min-height: calc(100svh - var(--header-height));
+}
+
 .prototype-section__eyebrow {
   margin: 0 0 var(--space-3);
   color: var(--color-accent);
