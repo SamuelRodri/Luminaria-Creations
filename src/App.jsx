@@ -7,18 +7,24 @@ function App() {
       <Header />
 
       <main id="contenido" className="page-content">
-        <section id="inicio" className="prototype-section" aria-labelledby="page-title">
+        <section id="proyectos" className="prototype-section" aria-labelledby="projects-title">
           <p className="prototype-section__eyebrow">Web Luminaria</p>
-          <h1 id="page-title">Una página para iluminar nuevas ideas.</h1>
+          <h1 id="projects-title">Proyectos que iluminan nuevas ideas.</h1>
           <p>
-            Este espacio queda preparado para incorporar las próximas secciones
-            del sitio.
+            Este espacio queda preparado para presentar nuestros próximos
+            proyectos.
           </p>
         </section>
 
-        <section id="proyecto" className="prototype-anchor" aria-label="Proyecto" />
-        <section id="servicios" className="prototype-anchor" aria-label="Servicios" />
-        <section id="contacto" className="prototype-anchor" aria-label="Contacto" />
+        <section id="about-us" className="prototype-section prototype-section--secondary" aria-labelledby="about-title">
+          <p className="prototype-section__eyebrow">About us</p>
+          <h2 id="about-title">Quiénes somos.</h2>
+        </section>
+
+        <section id="contacto" className="prototype-section prototype-section--secondary" aria-labelledby="contact-title">
+          <p className="prototype-section__eyebrow">Contacto</p>
+          <h2 id="contact-title">Hablemos.</h2>
+        </section>
       </main>
     </div>
   )

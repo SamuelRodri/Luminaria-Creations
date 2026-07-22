@@ -2,9 +2,8 @@ import { useState } from 'react'
 import './Header.css'
 
 const navigationItems = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Proyecto', href: '#proyecto' },
-  { label: 'Servicios', href: '#servicios' },
+  { label: 'Proyectos', href: '#proyectos' },
+  { label: 'About us', href: '#about-us' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -16,7 +15,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="brand" href="#inicio" aria-label="Web Luminaria, inicio" onClick={closeMenu}>
+        <a className="brand" href="#contenido" aria-label="Web Luminaria, principio de la página" onClick={closeMenu}>
           <span className="brand__mark" aria-hidden="true">L</span>
           <span className="brand__name">Luminaria</span>
         </a>
