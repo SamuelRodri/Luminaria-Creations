@@ -1,0 +1,96 @@
+.not-found {
+  display: grid;
+  width: min(100% - (var(--page-gutter) * 2), var(--content-width));
+  min-height: 100svh;
+  margin-inline: auto;
+  grid-template-rows: auto 1fr;
+}
+
+.not-found__toolbar {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.not-found__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-strong);
+  font-size: var(--font-size-lg);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+
+.not-found__brand span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  place-items: center;
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  font-size: var(--font-size-base);
+  letter-spacing: 0;
+}
+
+.not-found__content {
+  display: grid;
+  max-width: 48rem;
+  align-content: center;
+  justify-items: start;
+  padding-block: var(--space-8);
+}
+
+.not-found__code {
+  margin: 0 0 var(--space-3);
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.not-found h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--color-text-strong);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.not-found__content > p:not(.not-found__code) {
+  max-width: 36rem;
+  margin: var(--space-5) 0 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.65;
+}
+
+.not-found__action {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  margin-top: var(--space-8);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.not-found__action:hover,
+.not-found__action:focus-visible {
+  filter: brightness(0.92);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 30rem) {
+  .not-found__brand {
+    font-size: 0;
+  }
+}

@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Header.css'
+
+const languageOptions = ['en', 'es']
 
 function Header({ language, onLanguageChange, content }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const homeUrl = `${window.location.pathname}${window.location.search}`
   const navigationItems = [
     { label: content.projects, href: '#proyectos' },
     { label: content.about, href: '#about-us' },
@@ -11,10 +14,21 @@ function Header({ language, onLanguageChange, content }) {
 
   const closeMenu = () => setIsMenuOpen(false)
 
+  useEffect(() => {
+    if (!isMenuOpen) return undefined
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') closeMenu()
+    }
+
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [isMenuOpen])
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="brand" href="#contenido" aria-label={content.brandLabel} onClick={closeMenu}>
+        <a className="brand" href={homeUrl} aria-label={content.brandLabel} onClick={closeMenu}>
           <span className="brand__mark" aria-hidden="true">L</span>
           <span className="brand__name">Luminaria Creations</span>
         </a>
@@ -46,13 +60,16 @@ function Header({ language, onLanguageChange, content }) {
         </nav>
 
         <div className="language-switcher" role="group" aria-label={content.languageLabel}>
-          {['en', 'es'].map((option) => (
+          {languageOptions.map((option) => (
             <button
               key={option}
               type="button"
               className={language === option ? 'language-switcher__option language-switcher__option--active' : 'language-switcher__option'}
               aria-pressed={language === option}
-              onClick={() => onLanguageChange(option)}
+              onClick={() => {
+                onLanguageChange(option)
+                closeMenu()
+              }}
             >
               {option.toUpperCase()}
             </button>
