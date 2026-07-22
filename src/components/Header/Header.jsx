@@ -1,21 +1,20 @@
 import { useState } from 'react'
 import './Header.css'
 
-const navigationItems = [
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'About us', href: '#about-us' },
-  { label: 'Contacto', href: '#contacto' },
-]
-
-function Header() {
+function Header({ language, onLanguageChange, content }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigationItems = [
+    { label: content.projects, href: '#proyectos' },
+    { label: content.about, href: '#about-us' },
+    { label: content.contact, href: '#contacto' },
+  ]
 
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="brand" href="#contenido" aria-label="Luminaria Creations, principio de la página" onClick={closeMenu}>
+        <a className="brand" href="#contenido" aria-label={content.brandLabel} onClick={closeMenu}>
           <span className="brand__mark" aria-hidden="true">L</span>
           <span className="brand__name">Luminaria Creations</span>
         </a>
@@ -25,7 +24,7 @@ function Header() {
           type="button"
           aria-expanded={isMenuOpen}
           aria-controls="main-navigation"
-          aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={isMenuOpen ? content.closeMenu : content.openMenu}
           onClick={() => setIsMenuOpen((currentValue) => !currentValue)}
         >
           <span />
@@ -35,7 +34,7 @@ function Header() {
         <nav
           id="main-navigation"
           className={`main-navigation${isMenuOpen ? ' main-navigation--open' : ''}`}
-          aria-label="Navegación principal"
+          aria-label={content.label}
         >
           <ul>
             {navigationItems.map((item) => (
@@ -45,6 +44,20 @@ function Header() {
             ))}
           </ul>
         </nav>
+
+        <div className="language-switcher" role="group" aria-label={content.languageLabel}>
+          {['en', 'es'].map((option) => (
+            <button
+              key={option}
+              type="button"
+              className={language === option ? 'language-switcher__option language-switcher__option--active' : 'language-switcher__option'}
+              aria-pressed={language === option}
+              onClick={() => onLanguageChange(option)}
+            >
+              {option.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </div>
     </header>
   )
