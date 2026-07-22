@@ -18,5 +18,6 @@ function staticNotFoundPage() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Luminaria-Creations/',
   plugins: [react(), staticNotFoundPage()],
 })
