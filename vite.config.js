@@ -16,8 +16,11 @@ function staticNotFoundPage() {
   }
 }
 
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true'
+const repoBase = '/Luminaria-Creations/'
+
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: isGitHubActions ? repoBase : '/',
   plugins: [react(), staticNotFoundPage()],
 })
