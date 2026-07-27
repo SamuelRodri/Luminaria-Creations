@@ -44,6 +44,7 @@ const createTeamMembers = (roles) => [
         url: 'https://www.instagram.com/louxpardo/',
       },
     ],
+    description: 'Leads visual direction and coordinates production across projects.',
   },
   {
     name: 'Javier Santana Rodríguez',
@@ -55,6 +56,7 @@ const createTeamMembers = (roles) => [
         url: 'https://www.linkedin.com/in/javier-santana-rodr%C3%ADguez-200a74396',
       },
     ],
+    description: 'Designs gameplay levels and oversees legal/administrative tasks.',
   },
   {
     name: 'Samuel Rodríguez Hernández',
@@ -66,6 +68,7 @@ const createTeamMembers = (roles) => [
         url: 'https://www.linkedin.com/in/samuelrodri/',
       },
     ],
+    description: 'Architects game systems and tools; leads programming and technical design.',
   },
 ]
 

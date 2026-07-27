@@ -16,7 +16,10 @@ function TeamMember({ member, socialLabel }) {
         <ProfilePlaceholder />
       </div>
       <h4>{member.name}</h4>
-      <p>{member.role}</p>
+      <p className="team-member__role">{member.role}</p>
+      {member.description && (
+        <p className="team-member__desc">{member.description}</p>
+      )}
       <ul
         className="team-member__socials"
         aria-label={`${socialLabel} ${member.name}`}
