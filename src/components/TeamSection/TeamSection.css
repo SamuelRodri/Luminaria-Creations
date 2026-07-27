@@ -80,6 +80,11 @@
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 
+.team-member__socials a svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
 .team-member {
   text-align: center;
 }
@@ -90,11 +95,7 @@
   font-weight: 600;
 }
 
-.team-member__desc {
-  margin: 0.35rem 0 var(--space-3);
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
+/* removed member description styles - descriptions disabled */
 
 .team-member__socials a:hover,
 .team-member__socials a:focus-visible {
