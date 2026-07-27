@@ -99,9 +99,9 @@ export const translations = {
       teamTitle: 'Meet the studio',
       socialLabel: 'Social profiles for',
       members: createTeamMembers({
-        artDirectorProducer: 'Art Director • Producer',
-        leadLevelDesigner: 'Lead Level Designer • Legal Assistant',
-        leadProgrammer: 'Lead Programmer • Designer',
+        artDirectorProducer: 'Art Director & Producer',
+        leadLevelDesigner: 'Lead Level Designer & Legal Assistant',
+        leadProgrammer: 'Lead Programmer & Designer',
       }),
     },
     contact: {
@@ -151,9 +151,9 @@ export const translations = {
       teamTitle: 'El equipo del estudio',
       socialLabel: 'Redes sociales de',
       members: createTeamMembers({
-        artDirectorProducer: 'Directora de arte • Productora',
-        leadLevelDesigner: 'Diseñador principal de niveles • Asistente legal',
-        leadProgrammer: 'Programador principal • Diseñador',
+        artDirectorProducer: 'Directora de arte y productora',
+        leadLevelDesigner: 'Diseñador principal de niveles y asistente legal',
+        leadProgrammer: 'Programador principal y diseñador',
       }),
     },
     contact: {
