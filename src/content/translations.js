@@ -4,16 +4,6 @@ const socialProfiles = {
     shortLabel: 'ig',
     url: 'https://www.instagram.com/',
   },
-  linkedIn: {
-    label: 'LinkedIn',
-    shortLabel: 'in',
-    url: 'https://www.linkedin.com/',
-  },
-  behance: {
-    label: 'Behance',
-    shortLabel: 'be',
-    url: 'https://www.behance.net/',
-  },
   itchIo: {
     label: 'itch.io',
     shortLabel: 'io',
@@ -23,8 +13,6 @@ const socialProfiles = {
 
 const contactSocials = [
   socialProfiles.instagram,
-  socialProfiles.linkedIn,
-  socialProfiles.behance,
   socialProfiles.itchIo,
 ]
 
@@ -44,7 +32,6 @@ const createTeamMembers = (roles) => [
         url: 'https://www.instagram.com/louxpardo/',
       },
     ],
-    description: 'Leads visual direction and coordinates production across projects.',
   },
   {
     name: 'Javier Santana Rodríguez',
@@ -56,7 +43,6 @@ const createTeamMembers = (roles) => [
         url: 'https://www.linkedin.com/in/javier-santana-rodr%C3%ADguez-200a74396',
       },
     ],
-    description: 'Designs gameplay levels and oversees legal/administrative tasks.',
   },
   {
     name: 'Samuel Rodríguez Hernández',
@@ -68,7 +54,6 @@ const createTeamMembers = (roles) => [
         url: 'https://www.linkedin.com/in/samuelrodri/',
       },
     ],
-    description: 'Architects game systems and tools; leads programming and technical design.',
   },
 ]
 
@@ -112,7 +97,7 @@ export const translations = {
       title: 'Let’s talk.',
       description: 'Have a project in mind or simply want to say hello? We would love to hear from you.',
       emailLabel: 'Email',
-      email: 'hello@luminariacreations.com',
+      email: 'creationsluminaria@gmail.com',
       socialLabel: 'Follow us',
       socials: contactSocials,
     },
@@ -164,7 +149,7 @@ export const translations = {
       title: 'Hablemos.',
       description: '¿Tienes un proyecto en mente o simplemente quieres saludarnos? Nos encantará saber de ti.',
       emailLabel: 'Email',
-      email: 'hello@luminariacreations.com',
+      email: 'creationsluminaria@gmail.com',
       socialLabel: 'Síguenos',
       socials: contactSocials,
     },

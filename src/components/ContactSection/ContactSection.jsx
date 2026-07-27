@@ -1,4 +1,5 @@
 import './ContactSection.css'
+import SocialIcon from '../SocialIcon/SocialIcon'
 
 function ContactSection({ content }) {
   return (
@@ -24,8 +25,14 @@ function ContactSection({ content }) {
           <ul className="contact-section__socials">
             {content.socials.map((social) => (
               <li key={social.label}>
-                <a href={social.url} target="_blank" rel="noreferrer">
-                  {social.label}
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
+                >
+                  <SocialIcon name={social.label} />
+                  <span>{social.label}</span>
                 </a>
               </li>
             ))}
