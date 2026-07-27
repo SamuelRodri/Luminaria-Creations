@@ -30,19 +30,42 @@ const contactSocials = [
 
 const createTeamMembers = (roles) => [
   {
-    name: 'Alex Morgan',
-    role: roles.creativeDirector,
-    socials: [socialProfiles.linkedIn, socialProfiles.instagram],
+    name: 'Lourdes Pardo Santana',
+    role: roles.artDirectorProducer,
+    socials: [
+      {
+        label: 'LinkedIn',
+        shortLabel: 'in',
+        url: 'https://www.linkedin.com/in/lourdes-pardo-santana-84a45624b/',
+      },
+      {
+        label: 'Instagram',
+        shortLabel: 'ig',
+        url: 'https://www.instagram.com/louxpardo/',
+      },
+    ],
   },
   {
-    name: 'Sam Rivera',
-    role: roles.artDirector,
-    socials: [socialProfiles.linkedIn, socialProfiles.behance],
+    name: 'Javier Santana Rodríguez',
+    role: roles.leadLevelDesigner,
+    socials: [
+      {
+        label: 'LinkedIn',
+        shortLabel: 'in',
+        url: 'https://www.linkedin.com/in/javier-santana-rodr%C3%ADguez-200a74396',
+      },
+    ],
   },
   {
-    name: 'Taylor Lee',
-    role: roles.designer,
-    socials: [socialProfiles.linkedIn, socialProfiles.instagram],
+    name: 'Samuel Rodríguez Hernández',
+    role: roles.leadProgrammer,
+    socials: [
+      {
+        label: 'LinkedIn',
+        shortLabel: 'in',
+        url: 'https://www.linkedin.com/in/samuelrodri/',
+      },
+    ],
   },
 ]
 
@@ -76,9 +99,9 @@ export const translations = {
       teamTitle: 'Meet the studio',
       socialLabel: 'Social profiles for',
       members: createTeamMembers({
-        creativeDirector: 'Creative Director',
-        artDirector: 'Art Director',
-        designer: 'Designer',
+        artDirectorProducer: 'Art Director • Producer',
+        leadLevelDesigner: 'Lead Level Designer • Legal Assistant',
+        leadProgrammer: 'Lead Programmer • Designer',
       }),
     },
     contact: {
@@ -128,9 +151,9 @@ export const translations = {
       teamTitle: 'El equipo del estudio',
       socialLabel: 'Redes sociales de',
       members: createTeamMembers({
-        creativeDirector: 'Dirección creativa',
-        artDirector: 'Dirección de arte',
-        designer: 'Diseño',
+        artDirectorProducer: 'Directora de arte • Productora',
+        leadLevelDesigner: 'Diseñador principal de niveles • Asistente legal',
+        leadProgrammer: 'Programador principal • Diseñador',
       }),
     },
     contact: {
