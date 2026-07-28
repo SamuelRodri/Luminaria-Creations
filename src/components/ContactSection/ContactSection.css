@@ -10,10 +10,11 @@
 }
 
 .contact-section__heading > p:last-child {
-  max-width: 34rem;
+  max-width: 58ch;
   margin: var(--space-5) 0 0;
   font-size: var(--font-size-lg);
   line-height: 1.65;
+  text-wrap: pretty;
 }
 
 .contact-section__details {

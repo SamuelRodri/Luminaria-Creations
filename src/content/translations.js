@@ -2,7 +2,7 @@ const socialProfiles = {
   instagram: {
     label: 'Instagram',
     shortLabel: 'ig',
-    url: 'https://www.instagram.com/',
+    url: 'https://www.instagram.com/creationsluminaria/',
   },
   itchIo: {
     label: 'itch.io',
@@ -71,19 +71,19 @@ export const translations = {
     },
     intro: {
       eyebrow: 'Luminaria Creations',
-      title: 'A place to illuminate new ideas.',
-      description: 'This space is ready for the main introductory message.',
+      title: 'Games that illuminate new ways to play.',
+      description: 'We are an independent game studio from Gran Canaria. We create experiences with an identity of their own, where mechanics, art and narrative share a common purpose.',
     },
     projects: {
       eyebrow: 'Projects',
-      title: 'We’re building something bright.',
-      description: 'Our projects are currently taking shape. We’re working on them with care and will be ready to share more soon.',
+      title: 'Ideas shaped into experiences.',
+      description: 'We explore, prototype and learn with every project, bringing the spirit of game jams into games designed with creativity, intention and care.',
       imageAlt: 'A construction crane assembling an illuminated geometric structure',
     },
     about: {
       eyebrow: 'About us',
       title: 'Who we are.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'We are a multidisciplinary team born from Gran Canaria’s game jam community. We believe in games as spaces to experiment, express ideas and connect with others—and we want to keep growing alongside the community that brought us together.',
       teamTitle: 'Meet the studio',
       socialLabel: 'Social profiles for',
       members: createTeamMembers({
@@ -95,7 +95,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contact',
       title: 'Let’s talk.',
-      description: 'Have a project in mind or simply want to say hello? We would love to hear from you.',
+      description: 'Have a project in mind, want to collaborate or simply say hello? We would love to hear from you.',
       emailLabel: 'Email',
       email: 'creationsluminaria@gmail.com',
       socialLabel: 'Follow us',
@@ -123,19 +123,19 @@ export const translations = {
     },
     intro: {
       eyebrow: 'Luminaria Creations',
-      title: 'Un lugar para iluminar nuevas ideas.',
-      description: 'Este espacio queda preparado para el mensaje principal de presentación.',
+      title: 'Videojuegos que iluminan nuevas formas de jugar.',
+      description: 'Somos un estudio independiente de Gran Canaria. Creamos experiencias con identidad propia, donde las mecánicas, el arte y la narrativa responden a una intención común.',
     },
     projects: {
       eyebrow: 'Proyectos',
-      title: 'Estamos construyendo algo brillante.',
-      description: 'Nuestros proyectos están tomando forma. Trabajamos en ellos con cuidado y muy pronto podremos compartir más.',
+      title: 'Ideas que se convierten en experiencias.',
+      description: 'Exploramos, prototipamos y aprendemos con cada proyecto, llevando el espíritu de las game jams a juegos creados con creatividad, intención y cuidado.',
       imageAlt: 'Una grúa construyendo una estructura geométrica iluminada',
     },
     about: {
       eyebrow: 'Nosotros',
       title: 'Quiénes somos.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'Somos un equipo multidisciplinar nacido de la comunidad de game jams de Gran Canaria. Entendemos los videojuegos como espacios para experimentar, expresar ideas y conectar con otras personas, y queremos seguir creciendo junto a la comunidad que nos unió.',
       teamTitle: 'El equipo del estudio',
       socialLabel: 'Redes sociales de',
       members: createTeamMembers({
@@ -147,7 +147,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contacto',
       title: 'Hablemos.',
-      description: '¿Tienes un proyecto en mente o simplemente quieres saludarnos? Nos encantará saber de ti.',
+      description: '¿Tienes un proyecto en mente, quieres colaborar o simplemente saludarnos? Nos encantará saber de ti.',
       emailLabel: 'Email',
       email: 'creationsluminaria@gmail.com',
       socialLabel: 'Síguenos',
