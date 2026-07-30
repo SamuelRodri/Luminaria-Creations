@@ -1,0 +1,73 @@
+.development-notice {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  padding: var(--page-gutter);
+  place-items: center;
+  background: rgb(6 26 30 / 78%);
+  backdrop-filter: blur(8px);
+}
+
+.development-notice__dialog {
+  width: min(100%, 34rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-sky);
+  box-shadow: var(--shadow-lg);
+}
+
+.development-notice__stripe {
+  height: 0.65rem;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-accent) 0 1.25rem,
+    var(--color-text-strong) 1.25rem 2.5rem
+  );
+}
+
+.development-notice__content {
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.development-notice__eyebrow {
+  margin: 0 0 var(--space-3);
+  color: var(--color-accent-text);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.development-notice h2 {
+  margin: 0;
+  color: var(--color-text-strong);
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.05;
+}
+
+.development-notice__content > p:last-of-type {
+  margin: var(--space-5) 0 0;
+  line-height: 1.6;
+}
+
+.development-notice button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  margin-top: var(--space-8);
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.development-notice button:hover,
+.development-notice button:focus-visible {
+  background: color-mix(in srgb, var(--color-accent) 86%, black);
+  transform: translateY(-2px);
+}

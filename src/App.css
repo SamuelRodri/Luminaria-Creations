@@ -22,7 +22,7 @@
 
 .prototype-section__eyebrow {
   margin: 0 0 var(--space-3);
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -30,13 +30,19 @@
 }
 
 .prototype-section h1 {
-  max-width: 13ch;
+  max-width: 100%;
   margin: 0;
   color: var(--color-text-strong);
-  font-size: clamp(2.75rem, 7vw, 5.75rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 0.98;
-  letter-spacing: -0.055em;
-  text-wrap: balance;
+  letter-spacing: 0;
+  word-spacing: -0.7em;
+  text-wrap: wrap;
+}
+
+.prototype-section__title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .prototype-section > p:last-child {
@@ -58,13 +64,13 @@
   color: var(--color-text-strong);
   font-size: clamp(2.25rem, 6vw, 4.75rem);
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 
 .projects-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(20rem, 1.25fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
   align-items: center;
   max-width: none;
   gap: clamp(2rem, 6vw, 5rem);
@@ -107,6 +113,10 @@
   text-wrap: pretty;
 }
 
+.projects-section h2 {
+  font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+}
+
 @media (max-width: 48rem) {
   .projects-section {
     grid-template-columns: 1fr;
@@ -116,4 +126,87 @@
   .projects-section__image {
     order: -1;
   }
+}
+
+/* Unified canvas; the remaining brand colors are used as accents and components. */
+.page-content::before {
+  position: fixed;
+  z-index: -2;
+  inset: 0;
+  content: "";
+  background: var(--color-sky);
+}
+
+.prototype-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.prototype-section::before {
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  right: 50%;
+  left: 50%;
+  width: 100vw;
+  margin-inline: -50vw;
+  content: "";
+  background: inherit;
+}
+
+.prototype-section--intro {
+  color: var(--color-text);
+  background: var(--color-sky);
+}
+
+.prototype-section--intro .prototype-section__eyebrow {
+  color: var(--color-ink);
+}
+
+.prototype-section--intro h1 {
+  color: var(--color-ink);
+}
+
+.projects-section {
+  background: var(--color-sky);
+}
+
+.projects-section__image {
+  border: 0.35rem solid var(--color-yellow);
+}
+
+.about-section {
+  color: var(--color-ink);
+  background: var(--color-sky);
+}
+
+.about-section .prototype-section__eyebrow {
+  color: var(--color-ink);
+}
+
+.prototype-section__eyebrow {
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-left: 0.35rem solid var(--color-navy);
+  background: var(--color-teal);
+}
+
+/* Ready for the future project-card grid. */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--space-5);
+}
+
+.project-card {
+  overflow: hidden;
+  border: 1px solid var(--color-teal);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-muted);
+  box-shadow: 0 0.75rem 2rem rgb(6 26 30 / 10%);
+}
+
+.project-card__tag {
+  color: var(--color-ink);
+  background: var(--color-yellow);
 }

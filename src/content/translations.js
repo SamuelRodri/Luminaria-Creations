@@ -59,6 +59,11 @@ const createTeamMembers = (roles) => [
 
 export const translations = {
   en: {
+    developmentNotice: {
+      title: 'Website under construction.',
+      description: 'We are still shaping this space. Some details may change while we continue building, but you are welcome to look around.',
+      action: 'Continue to the website',
+    },
     navigation: {
       label: 'Main navigation',
       projects: 'Projects',
@@ -71,7 +76,7 @@ export const translations = {
     },
     intro: {
       eyebrow: 'Luminaria Creations',
-      title: 'Games that illuminate new ways to play.',
+      title: ['Creativity', 'lights our way.'],
       description: 'We are an independent game studio from Gran Canaria. We create experiences with an identity of their own, where mechanics, art and narrative share a common purpose.',
     },
     projects: {
@@ -111,6 +116,11 @@ export const translations = {
     },
   },
   es: {
+    developmentNotice: {
+      title: 'Web en construcción.',
+      description: 'Seguimos dando forma a este espacio. Algunos detalles pueden cambiar mientras continuamos construyendo, pero puedes visitarlo con normalidad.',
+      action: 'Continuar a la web',
+    },
     navigation: {
       label: 'Navegación principal',
       projects: 'Proyectos',
@@ -123,7 +133,7 @@ export const translations = {
     },
     intro: {
       eyebrow: 'Luminaria Creations',
-      title: 'Videojuegos que iluminan nuevas formas de jugar.',
+      title: ['Creatividad,', 'luz que guía.'],
       description: 'Somos un estudio independiente de Gran Canaria. Creamos experiencias con identidad propia, donde las mecánicas, el arte y la narrativa responden a una intención común.',
     },
     projects: {

@@ -1,8 +1,29 @@
 .contact-section {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.75fr);
   align-items: center;
   gap: clamp(3rem, 8vw, 7rem);
+  color: var(--color-text);
+  background: var(--color-sky);
+}
+
+.contact-section::before {
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  right: 50%;
+  left: 50%;
+  width: 100vw;
+  margin-inline: -50vw;
+  content: "";
+  background: var(--color-sky);
+}
+
+.contact-section h2,
+.contact-section__email {
+  color: var(--color-ink);
 }
 
 .contact-section__heading {
@@ -24,7 +45,9 @@
 
 .contact-section__label {
   margin: 0 0 var(--space-3);
-  color: var(--color-accent);
+  color: var(--color-ink);
+  border-left: 0.35rem solid var(--color-gold);
+  padding-left: 0.5rem;
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -35,7 +58,7 @@
   color: var(--color-text-strong);
   font-size: clamp(1.15rem, 2.4vw, 1.65rem);
   font-weight: 650;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
   overflow-wrap: anywhere;
@@ -56,9 +79,9 @@
   gap: 0.55rem;
   min-height: 2.5rem;
   padding: 0.5rem 0.85rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-teal);
   border-radius: 999px;
-  color: var(--color-text-strong);
+  color: var(--color-deep-teal);
   font-weight: 650;
   text-decoration: none;
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease,

@@ -4,7 +4,7 @@ import SocialIcon from '../SocialIcon/SocialIcon'
 function ContactSection({ content }) {
   return (
     <section
-      id="contacto"
+      id="contact"
       className="prototype-section prototype-section--secondary contact-section"
       aria-labelledby="contact-title"
     >

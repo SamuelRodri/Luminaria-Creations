@@ -3,8 +3,8 @@
   z-index: 10;
   top: 0;
   min-height: var(--header-height);
-  border-bottom: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+  border-bottom: 1px solid var(--color-ink);
+  background: color-mix(in srgb, var(--color-navy) 96%, transparent);
   backdrop-filter: blur(16px);
 }
 
@@ -22,10 +22,10 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  color: var(--color-text-strong);
+  color: var(--color-gold);
   font-size: var(--font-size-lg);
   font-weight: 750;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
   text-decoration: none;
 }
 
@@ -57,9 +57,9 @@
 .language-switcher {
   display: inline-flex;
   padding: 0.2rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-gold);
   border-radius: 999px;
-  background: var(--color-surface-muted);
+  background: color-mix(in srgb, var(--color-ink) 24%, transparent);
 }
 
 .language-switcher__option {
@@ -68,7 +68,7 @@
   padding: 0.25rem 0.5rem;
   border: 0;
   border-radius: 999px;
-  color: var(--color-text);
+  color: var(--color-gold);
   background: transparent;
   font: inherit;
   font-size: 0.7rem;
@@ -77,16 +77,16 @@
 }
 
 .language-switcher__option--active {
-  color: var(--color-text-strong);
-  background: var(--color-surface);
-  box-shadow: 0 1px 3px rgb(29 28 25 / 12%);
+  color: var(--color-ink);
+  background: var(--color-yellow);
+  box-shadow: 0 1px 3px rgb(6 26 30 / 30%);
 }
 
 .main-navigation a {
   display: block;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
-  color: var(--color-text);
+  color: var(--color-gold);
   font-size: var(--font-size-sm);
   font-weight: 600;
   text-decoration: none;
@@ -95,8 +95,8 @@
 
 .main-navigation a:hover,
 .main-navigation a:focus-visible {
-  color: var(--color-text-strong);
-  background: var(--color-surface-muted);
+  color: var(--color-ink);
+  background: var(--color-yellow);
 }
 
 .menu-toggle {
@@ -125,14 +125,14 @@
     border-radius: var(--radius-sm);
     place-content: center;
     gap: 0.35rem;
-    color: var(--color-text-strong);
+    color: var(--color-gold);
     background: transparent;
     cursor: pointer;
   }
 
   .menu-toggle:hover,
   .menu-toggle:focus-visible {
-    background: var(--color-surface-muted);
+    background: color-mix(in srgb, var(--color-ink) 24%, transparent);
   }
 
   .menu-toggle span {
@@ -150,10 +150,10 @@
     left: var(--page-gutter);
     visibility: hidden;
     padding: var(--space-2);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-gold);
     border-radius: var(--radius-lg);
     opacity: 0;
-    background: var(--color-surface);
+    background: var(--color-navy);
     box-shadow: var(--shadow-lg);
     transform: translateY(-0.5rem);
     transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;

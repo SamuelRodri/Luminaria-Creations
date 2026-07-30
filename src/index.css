@@ -1,14 +1,49 @@
-:root {
-  /* Design tokens: cambiar estos valores actualiza el aspecto global. */
-  --color-surface: #fbfaf7;
-  --color-surface-muted: #f0eee8;
-  --color-text: #625f58;
-  --color-text-strong: #1d1c19;
-  --color-border: #dedbd2;
-  --color-accent: #d45c2c;
-  --color-on-accent: #ffffff;
+@font-face {
+  font-family: "Salmon Typewriter";
+  src: url("./assets/fonts/salmon-typewriter-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
 
-  --font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+@font-face {
+  font-family: "Salmon Typewriter";
+  src: url("./assets/fonts/salmon-typewriter-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  /* Luminaria Creations palette. */
+  --color-light: #f8e6a0;
+  --color-teal: #86c5ff;
+  --color-gold: #ffa62b;
+  --color-navy: #2e5aa7;
+  --color-deep-teal: var(--color-navy);
+  --color-ink: #1a2a46;
+  --color-sky: var(--color-light);
+  --color-yellow: var(--color-gold);
+  --color-surface: var(--color-sky);
+  --color-surface-muted: color-mix(in srgb, var(--color-sky) 58%, white);
+  --color-text: var(--color-ink);
+  --color-text-muted: color-mix(in srgb, var(--color-ink) 78%, var(--color-light));
+  --color-text-strong: var(--color-ink);
+  --color-border: color-mix(in srgb, var(--color-deep-teal) 34%, transparent);
+  --color-accent: var(--color-yellow);
+  --color-accent-text: var(--color-ink);
+  --color-on-accent: var(--color-ink);
+
+  --font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-family-display: "Salmon Typewriter", ui-monospace, monospace;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
@@ -22,7 +57,7 @@
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
-  --shadow-lg: 0 1.25rem 3rem rgb(29 28 25 / 12%);
+  --shadow-lg: 0 1.25rem 3rem rgb(6 26 30 / 22%);
 
   --content-width: 75rem;
   --page-gutter: clamp(1rem, 4vw, 2.5rem);
@@ -31,6 +66,7 @@
   color: var(--color-text);
   background: var(--color-surface);
   font-family: var(--font-family);
+  font-weight: 500;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,6 +85,13 @@ body {
   min-width: 20rem;
   min-height: 100svh;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: var(--font-family-display);
 }
 
 button,

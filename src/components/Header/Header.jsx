@@ -3,14 +3,8 @@ import './Header.css'
 
 const languageOptions = ['en', 'es']
 
-function Header({ language, onLanguageChange, content }) {
+function Header({ language, onLanguageChange, content, homeUrl, navigationItems, onNavigate }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const homeUrl = `${window.location.pathname}${window.location.search}`
-  const navigationItems = [
-    { label: content.projects, href: '#proyectos' },
-    { label: content.about, href: '#about-us' },
-    { label: content.contact, href: '#contacto' },
-  ]
 
   const closeMenu = () => setIsMenuOpen(false)
 
@@ -53,7 +47,15 @@ function Header({ language, onLanguageChange, content }) {
           <ul>
             {navigationItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} onClick={closeMenu}>{item.label}</a>
+                <a
+                  href={item.href}
+                  onClick={(event) => {
+                    onNavigate(event, item)
+                    closeMenu()
+                  }}
+                >
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
