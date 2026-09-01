@@ -21,24 +21,32 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
-  color: var(--color-gold);
-  font-size: var(--font-size-lg);
-  font-weight: 750;
-  letter-spacing: 0;
   text-decoration: none;
 }
 
-.brand__mark {
+.brand__logo {
   display: grid;
-  width: 2.25rem;
-  height: 2.25rem;
-  place-items: center;
-  border-radius: var(--radius-md);
-  color: var(--color-on-accent);
-  background: var(--color-accent);
-  font-size: var(--font-size-base);
-  letter-spacing: 0;
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-inline: 0.3rem;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  color: #f8e6a0;
+  background: #0963aa;
+  font-family: var(--font-family-display);
+  font-size: 0.375rem;
+  font-weight: 700;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.brand__logo-text {
+  display: grid;
+  justify-items: start;
 }
 
 .main-navigation ul {
@@ -112,8 +120,11 @@
     margin-right: auto;
   }
 
-  .brand__name {
-    display: none;
+  .brand__logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding-inline: 0.25rem;
+    font-size: 0.325rem;
   }
 
   .menu-toggle {

@@ -5,8 +5,12 @@ function NotFound({ content, homeUrl, language, onLanguageChange }) {
     <main className="not-found">
       <div className="not-found__toolbar">
         <a className="not-found__brand" href={homeUrl} aria-label={content.homeLabel}>
-          <span aria-hidden="true">L</span>
-          Luminaria Creations
+          <span className="not-found__logo" aria-hidden="true">
+            <span className="not-found__logo-text">
+              <span>Luminaria</span>
+              <span>Creations</span>
+            </span>
+          </span>
         </a>
         <div className="language-switcher" role="group" aria-label={content.languageLabel}>
           {['en', 'es'].map((option) => (

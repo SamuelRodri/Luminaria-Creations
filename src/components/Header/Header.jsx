@@ -23,8 +23,12 @@ function Header({ language, onLanguageChange, content, homeUrl, navigationItems,
     <header className="site-header">
       <div className="site-header__inner">
         <a className="brand" href={homeUrl} aria-label={content.brandLabel} onClick={closeMenu}>
-          <span className="brand__mark" aria-hidden="true">L</span>
-          <span className="brand__name">Luminaria Creations</span>
+          <span className="brand__logo" aria-hidden="true">
+            <span className="brand__logo-text">
+              <span>Luminaria</span>
+              <span>Creations</span>
+            </span>
+          </span>
         </a>
 
         <button
