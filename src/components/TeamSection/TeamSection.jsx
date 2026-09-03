@@ -1,5 +1,14 @@
 import './TeamSection.css'
 import SocialIcon from '../SocialIcon/SocialIcon'
+import javierAvatar from '../../assets/team/javier.png'
+import lourdesAvatar from '../../assets/team/lourdes.png'
+import samuelAvatar from '../../assets/team/samuel.png'
+
+const avatars = {
+  javier: javierAvatar,
+  lourdes: lourdesAvatar,
+  samuel: samuelAvatar,
+}
 
 function ProfilePlaceholder() {
   return (
@@ -13,8 +22,12 @@ function ProfilePlaceholder() {
 function TeamMember({ member, socialLabel }) {
   return (
     <article className="team-member">
-      <div className="team-member__avatar">
-        <ProfilePlaceholder />
+      <div className={`team-member__avatar${member.avatar ? ' team-member__avatar--image' : ''}`}>
+        {member.avatar ? (
+          <img src={avatars[member.avatar]} alt="" width="55" height="55" loading="lazy" decoding="async" />
+        ) : (
+          <ProfilePlaceholder />
+        )}
       </div>
       <h4>{member.name}</h4>
       <p>{member.role}</p>

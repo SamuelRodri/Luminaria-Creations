@@ -28,6 +28,7 @@
   --color-teal: #86c5ff;
   --color-gold: #ffa62b;
   --color-navy: #2e5aa7;
+  --color-title: #244a88;
   --color-deep-teal: var(--color-navy);
   --color-ink: #1a2a46;
   --color-sky: var(--color-light);
@@ -90,8 +91,16 @@ body {
 h1,
 h2,
 h3,
+h4,
 .brand {
   font-family: var(--font-family-display);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-title);
 }
 
 button,

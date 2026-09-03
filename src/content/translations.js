@@ -19,6 +19,7 @@ const contactSocials = [
 const createTeamMembers = (roles) => [
   {
     name: 'Lourdes Pardo Santana',
+    avatar: 'lourdes',
     role: roles.artDirectorProducer,
     socials: [
       {
@@ -35,6 +36,7 @@ const createTeamMembers = (roles) => [
   },
   {
     name: 'Javier Santana Rodríguez',
+    avatar: 'javier',
     role: roles.leadLevelDesigner,
     socials: [
       {
@@ -46,6 +48,7 @@ const createTeamMembers = (roles) => [
   },
   {
     name: 'Samuel Rodríguez Hernández',
+    avatar: 'samuel',
     role: roles.leadProgrammer,
     socials: [
       {
