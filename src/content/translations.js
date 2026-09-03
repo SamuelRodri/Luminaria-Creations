@@ -83,7 +83,14 @@ export const translations = {
       eyebrow: 'Projects',
       title: 'Ideas shaped into experiences.',
       description: 'We explore, prototype and learn with every project, bringing the spirit of game jams into games designed with creativity, intention and care.',
-      imageAlt: 'A construction crane assembling an illuminated geometric structure',
+      loading: 'Loading projects…',
+      empty: 'There are no published projects right now.',
+      error: 'We could not load the projects.',
+      visitProfile: 'Visit our itch.io profile',
+      viewProject: 'View on itch.io',
+      projectDescriptions: {
+        4963539: 'A memory-matching roguelike where memory, luck and strategy come together to create impossible combos.',
+      },
     },
     about: {
       eyebrow: 'About us',
@@ -140,7 +147,14 @@ export const translations = {
       eyebrow: 'Proyectos',
       title: 'Ideas que se convierten en experiencias.',
       description: 'Exploramos, prototipamos y aprendemos con cada proyecto, llevando el espíritu de las game jams a juegos creados con creatividad, intención y cuidado.',
-      imageAlt: 'Una grúa construyendo una estructura geométrica iluminada',
+      loading: 'Cargando proyectos…',
+      empty: 'Ahora mismo no hay proyectos publicados.',
+      error: 'No hemos podido cargar los proyectos.',
+      visitProfile: 'Visita nuestro perfil de itch.io',
+      viewProject: 'Ver en itch.io',
+      projectDescriptions: {
+        4963539: 'Un roguelike de parejas donde memoria, suerte y estrategia se unen para crear combos imposibles.',
+      },
     },
     about: {
       eyebrow: 'Nosotros',
