@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import ContactSection from './components/ContactSection/ContactSection.jsx'
-import DevelopmentNotice from './components/DevelopmentNotice/DevelopmentNotice.jsx'
 import Header from './components/Header/Header.jsx'
 import NotFound from './components/NotFound/NotFound.jsx'
 import ProjectsSection from './components/ProjectsSection/ProjectsSection.jsx'
@@ -32,9 +31,6 @@ function App() {
     if (savedLanguage === 'en' || savedLanguage === 'es') return savedLanguage
     return navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en'
   })
-  const [showDevelopmentNotice, setShowDevelopmentNotice] = useState(
-    () => sessionStorage.getItem('luminaria-development-notice-dismissed') !== 'true',
-  )
   const content = translations[language]
   const normalizedPath = currentPath.replace(/^\//, '')
   const activeSection = Object.entries(sectionRoutes[language]).find(
@@ -47,11 +43,6 @@ function App() {
     href: `${basePath}/${route}`,
     label: content.navigation[section],
   }))
-
-  const closeDevelopmentNotice = () => {
-    sessionStorage.setItem('luminaria-development-notice-dismissed', 'true')
-    setShowDevelopmentNotice(false)
-  }
 
   const changeLanguage = (nextLanguage) => {
     if (nextLanguage === language) return
@@ -118,13 +109,6 @@ function App() {
 
   return (
     <div className="site-shell">
-      {showDevelopmentNotice && (
-        <DevelopmentNotice
-          content={content.developmentNotice}
-          onClose={closeDevelopmentNotice}
-        />
-      )}
-
       <Header
         language={language}
         onLanguageChange={changeLanguage}
